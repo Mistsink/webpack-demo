@@ -1,4 +1,6 @@
 const webpack = require('webpack')
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 
 module.exports = {
     mode: 'development',
@@ -7,6 +9,7 @@ module.exports = {
       filename: '[name].js',
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ESLintPlugin()
     ]
   };
